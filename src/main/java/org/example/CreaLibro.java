@@ -34,7 +34,7 @@ public class CreaLibro
 
 class Libro {
 
-    public ObjectId id;
+    public Long id;
     private String titulo;
     private String descripcion;
     private String autor;
@@ -43,17 +43,17 @@ class Libro {
 //    private Editorial editorial;
 
     public Libro(String t, String d, String a, Date f, boolean disp) {
-        id=new ObjectId();
+        this.id=id;
         titulo=t; descripcion=d; autor=a; fecha=f; disponible=disp;
     }
 
     public Libro() {
 
     }
-    public void setId(ObjectId id) { this.id = id; }
+    public void setId(Long id) { this.id = id; }
 
     @BsonId // anotación necesaria por ser el atributo id private
-    public ObjectId getId() { return id; }
+    public Long getId() { return id; }
 
     public String getTitulo() {
         return titulo;

@@ -29,7 +29,7 @@ public class InsertaOtro {
             // SOBRE EL MONGOCURSOR NEXT() RETORNA EL SIGUIENTE DOCUMENT
             documento = (Document)iter.next();
             libro = new Libro();
-            libro.setId(documento.getObjectId("_id"));
+            libro.setId(documento.getLong("_id"));
             libro.setTitulo(documento.getString("titulo"));
             libro.setDescripcion(documento.getString("descripcion"));
             libro.setAutor(documento.getString("autor"));

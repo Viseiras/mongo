@@ -33,7 +33,7 @@ public class MongoView {
             // guardamos su id
             documento = (Document)iter.next();
             libro = new Libro();
-            libro.setId(documento.getObjectId("_id"));
+            libro.setId(documento.getLong("_id"));
         }
 
         Libro libro2 = new Libro("A sangre fría","Historia de un asesinato múltiple","Truman Capote",(new GregorianCalendar(102 + 1900, 5, 2)).getTime(),true);
